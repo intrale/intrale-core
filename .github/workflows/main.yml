@@ -2,7 +2,7 @@ name: CI intrale-core
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   repository_dispatch:
 jobs:
   build: 
