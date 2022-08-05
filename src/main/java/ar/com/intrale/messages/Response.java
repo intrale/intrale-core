@@ -1,8 +1,10 @@
 package ar.com.intrale.messages;
 
+import io.micronaut.http.HttpStatus;
+
 public class Response {
 	
-	private Integer statusCode;
+	private Integer statusCode = HttpStatus.OK.getCode();
 
 	public Integer getStatusCode() {
 		return statusCode;

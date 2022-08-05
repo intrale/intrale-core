@@ -3,13 +3,18 @@ package ar.com.intrale.messages;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import io.micronaut.http.HttpStatus;
+
 public class FunctionExceptionResponse extends Response {
 	
 	private Collection<Error> errors = new ArrayList<Error>();
 	
-	public FunctionExceptionResponse() {}
+	public FunctionExceptionResponse() {
+		this.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.getCode());
+	}
 	
 	public FunctionExceptionResponse(Collection<Error> errors) {
+		this.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.getCode());
 		this.errors = errors;
 	}
 
