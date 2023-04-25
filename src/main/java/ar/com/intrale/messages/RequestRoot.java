@@ -49,7 +49,9 @@ public class RequestRoot implements Request{
 	public void setHeaders(Map<String, String> headers) {
 		this.headers = headers;
 	}
-	
+
+	@NonNull
+	@NotBlank
 	public String getBusinessName() {
 		if (this.headers==null) {
 			return StringUtils.EMPTY_STRING;
